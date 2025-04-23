@@ -12,7 +12,7 @@ export class UsersService extends BaseHttpServiceService{
     return this.http.get<User[]>(`${this.apiUrl}/users`); 
   }
 
-  getUser(id: number): Observable<User> {
+  getUser(id: string): Observable<User> {
     return this.http.get<User>(`${this.apiUrl}/users/${id}`);
   }
 }
