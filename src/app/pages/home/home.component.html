@@ -1,0 +1,9 @@
+<div class="container pb-5 mb-5">
+    <div class="row">
+        @for (user of users; track user.id) {
+        <div class="col mt-3">
+            <app-usuario-card [users] ="user"></app-usuario-card>
+        </div>
+        }
+    </div>
+</div>

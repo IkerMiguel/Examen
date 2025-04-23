@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+import { User } from '../../Interface/store';
 
 @Component({
   selector: 'app-usuario-card',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './usuario-card.component.css'
 })
 export class UsuarioCardComponent {
-
+  users = input.required<User>();
 }
