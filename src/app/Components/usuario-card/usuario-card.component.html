@@ -16,7 +16,7 @@
             <li class="list-group-item bg-transparent">
                 <i class="bi bi-briefcase-fill me-2"></i>{{ users().phone }}
             </li>
-            <a [routerLink]="['/userDetail', users().id]" class="btn btn-primary">
+            <a class="btn btn-primary" href="javascript:void(0)" [routerLink]="['/usersDetail',users().id]">
                 Ver Detalles
               </a>
         </ul>

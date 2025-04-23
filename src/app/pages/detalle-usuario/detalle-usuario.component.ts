@@ -23,4 +23,10 @@ export default class DetalleUsuarioComponent {
       console.log(this.user);
     });
   }
+
+  showMessage: boolean = false;
+
+  toggleMessage() {
+    this.showMessage = !this.showMessage;
+  }
 }

@@ -12,7 +12,7 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/home/home.component')
     },
     {
-        path: 'usersDetail',
+        path: 'usersDetail/:id',
         title: 'UsersDetail',
         loadComponent: () => import('./pages/detalle-usuario/detalle-usuario.component')
     },
