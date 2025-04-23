@@ -1,14 +1,18 @@
 import { Injectable } from '@angular/core';
+import { User } from '../Interface/store';
+import { Observable } from 'rxjs';
+import { BaseHttpServiceService } from './base-http-service.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class UsersService {
+export class UsersService extends BaseHttpServiceService{
 
-  constructor() { }
+  getUsers():Observable<any>{
+    return this.http.get<User[]>(`${this.apiUrl}/users`); 
+  }
 
-  async getUsers() {
-    const res = await fetch('https://fakestoreapi.com/users');
-    return res.json();
+  getUser(id: number): Observable<User> {
+    return this.http.get<User>(`${this.apiUrl}/users/${id}`);
   }
 }
